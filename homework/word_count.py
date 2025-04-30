@@ -1,4 +1,4 @@
-"""Taller evaluable"""
+
 
 import glob
 import os
@@ -40,7 +40,10 @@ def clean_text(dataframe):
     dataframe["line"] = (
         dataframe["line"]
         .str.replace(",", "")
-        .str.replace(",", "")
+        .str.replace(
+            ".",
+            "",
+        )
     )
     return dataframe
 
